@@ -1,6 +1,6 @@
-title: ""
-author: ""
-description: ""
+title: "Computer Vision/Deep Learning"
+author: "Simranjit Singh"
+description: "Hello!"
 
 # Jekyll settings
 permalink: /:title/          # see https://jekyllrb.com/docs/permalinks/
@@ -24,7 +24,7 @@ navigation:                  # (optional) site navigation in the header
 
 icons:                       # (optional) icons in the header, see http://fontawesome.com/icons
   envelope: "mailto:"
-  github: "https://github.com"
+  github: "https://github.com/simranjit2112"
   rss: "/feed.xml"
 
 comments:                    # embed disqus or isso comments
