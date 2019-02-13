@@ -4,18 +4,21 @@ layout: default
 <article>
 Here I try to summarize any interesting research papers that I come across. The field of deep learning is growing very rapidly and there is a lot to learn. So I try to write about some of the papers that I find interesting.
 </article>
-{% for page in site.posts %}
+
 <article class="archive">
   {{ content }}
-  <header><h1>{{paginator.posts}}</h1></header>
+  <header><h1>Papers</h1></header>
   {% for post in site.posts %}
   {%- assign date_format = site.date_format | default: "%B %d, %Y" -%}
   <div>
     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time>
     <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
   </div>
-  {% endfor %}
+{% endfor %}
 </article>
+
+
+{% for page in site.posts %}
 <article>
   <header>
     {%- assign date_format = site.date_format | default: "%B %d, %Y" -%}
