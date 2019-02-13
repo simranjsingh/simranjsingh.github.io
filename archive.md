@@ -1,4 +1,6 @@
 ---
-layout: home
+layout: blog
 title: "Blog"
+pagination:
+  enabled: true
 ---

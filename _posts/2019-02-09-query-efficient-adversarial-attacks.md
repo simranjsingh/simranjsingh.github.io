@@ -1,5 +1,7 @@
 ## Paper: [_**Query-Efficient Hard-label Black-box Attack: An Optimization-based Approach**_](https://arxiv.org/abs/1807.04457)
 
+*Minhao Cheng, Thong Le, Pin-Yu Chen, Jinfeng Yi, Huan Zhang, Cho-Jui Hsieh*
+
 This paper presents a novel approach to generate adversarial images for machine learning model in a black box setting and is currently the state of the art in term of number of queries required to make a successful adversarial attack.
 
 ​There has been a lot of work recently to study the robustness of deep neural networks. An adversarial example is a an image that is very close to another image but is classified differently by the CNN than the original image and the difference between two imperceptible by humans. A famous example is that of a modified STOP sign image among traffic symbols that appears as STOP sign to humans but is misclassified as some other symbol by a CNN classifier. As evident, this can lead to disastrous implications and hence the neural networks need to be made robust to such attacks.
