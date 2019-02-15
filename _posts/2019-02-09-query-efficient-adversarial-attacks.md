@@ -8,6 +8,8 @@ This paper presents a novel approach to generate adversarial images for machine 
 
 ​These attacks are studied in 3 broad settings based on the accessibility of the model being attacked. First is the white box setting where the attacker has access to the internals of the neural networks - weights/gradients. This has been the most common case of study in the early phases of adversarial attacks research. Here the model can be attacked by a simple gradient descent in input space starting from a sample until it is misclassified by the classifier though this is a not a common case in a real world setting. Second case is the soft label setting where probabilities for each class are provided for a given input query. This is observed in most real world classifier and has been dealt with various approaches like finite difference based gradient descent to find the input that is misclassified. The next case is the hard label setting which is very difficult to crack since the output is a discontinuous step function which is insensitive to small perturbation in inputs. Previous works to tackle this case have trained substitute models by querying the original model but transferring the attack from a substitute to original model is not very efficiently achieved.
 
+
+
 ​This paper deals with the hard label setting and overcomes the problem of discontinuity of hard labels by defining a new continuous function and optimizing it:
 
 $$g(\theta) = argmin_{\lambda>0} f(x_0 + \lambda\theta) \neq y_0$$

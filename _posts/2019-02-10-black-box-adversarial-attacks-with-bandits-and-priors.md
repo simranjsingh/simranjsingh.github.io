@@ -6,6 +6,8 @@ This work attempts on solving the problem of generating adversarial examples in 
 
 Recent research has been focused on generating adversarial examples that are misclassied by a CNN. Highly effective attacks have been developed for white box settings where adversary has access to model and its internals including gradients. Now research is focused on breaking models in black box setting where only the class probabilities, or in the harder case, only class labels are available. The attacks can be targeted, i.e getting a particular class as an output or untargeted where the concern is only getting an incorrect output from the classifier.
 
+
+
 The problem is formalized as finding a $$x'$$ given a pair $$(x_0, y_0)$$ and that maximizes the classifier loss function $$L: X \times Y \rightarrow R$$ but is within a given range of $$x_0$$:
 
 $$x' = argmax_{x':||x'-x||\leq\epsilon}L(x', y)$$
