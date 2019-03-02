@@ -14,6 +14,8 @@ Hence the authors propose a pyramid pooling system to aggregate information. As 
 
 <img src="../images/pspnet/pspnet.png">
 
+
+
 Thus a pyramid of pooling filters is used to aggregate information at different scales. The authors used a four-level pyramid pooling module with $$1\times1$$,$$2\times2$$ ,$$3\times3$$ and $$6\times6$$ filter sizes though the number of levels and sizes can be modified. The depth of these layers is reduced to $$1/N$$ where $$N$$ is the number of levels in the pyramid. These layers are then upsampled and concatenated with local features extracted using a pretrained Resnet model. This is followed by a final convolution layer to generate the final predictions.
 
 This kind of heirarichal pooling performs better than global pooling that had been proposed earlier. It is important to note here that the network uses bilinear interpolation for upsampling rather than deconvolution. 
