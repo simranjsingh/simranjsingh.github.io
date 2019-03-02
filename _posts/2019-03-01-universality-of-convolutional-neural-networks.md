@@ -8,10 +8,6 @@ CNNs overcome this limitations by using the translation-invariance property of i
 
 Deep CNNs have two main ingredients: the activation function which is *ReLU* in this paper and a sequence of convolution filter masks $$\boldsymbol{w} = \{w^{(j)}\}_j$$ where each filter mask is a sequence of filter coefficients $$w = (w_k)_{k=-\infty}^{\infty}$$ and $$w_k^{(i)} \neq 0$$ only for $$0 \leq k \leq s$$. The convolution of a filter mask $$w$$ with another sequence $$v = (v_0, v_1,...,v_D)$$ is then defined as a sequence with $$i^{th}$$ element as $$(w*v)_i = \sum_{k=0}^{D}w_{i-k}v_k$$. For example the third element of the resulting convolution sequence is $$(w*v)_3 = w_3v_0 + w_2v_1 + w_1v_2 + w_0v_3$$. Thus the convolution can be expressed as a matrix multiplication $$w*v = T_wv$$ where $$T_w$$ is a matrix of the form:
 
-
-
-
-
 $$T_w = \left( \begin{array}{cccccc}
 w_0 & 0 & 0 & 0 & \cdot & 0\\
 w_1 & w_0 & 0 & 0 & \cdot & 0\\
@@ -24,6 +20,8 @@ w_s & w_{s-1} & \cdots & w_0 & 0\cdots & 0\\
 \vdots & \ddots & \ddots & \ddots & \ddots & \vdots\\
 0 & \cdots & \cdots & \cdots0 & w_s & w_{s-1}\\
 0 & \cdots & \cdots & \cdots & \cdots0 & w_s\end{array} \right)$$
+
+
 
 
 
