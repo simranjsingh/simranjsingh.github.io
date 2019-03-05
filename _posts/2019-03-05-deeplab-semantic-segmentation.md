@@ -23,7 +23,8 @@ This work makes three significant contributions:
 
 
   The rate $$r$$ controls sampling rate and can be changed to obtain desired spatial resolution. $$r=1$$ gives us the standard convolution. Below figure shows how atrous convolution increases spatial resolution as compared to traditional pooling->convolution->upsampling layers:
-  <div style="text-align:center"><img src="../images/deeplab/2.png" width=600 ></div>
+
+  <div style="text-align:center"><img src="../images/deeplab/2.png" width="600" ></div>
 
   Atrous convolution with rate $$r$$ increases filter size from $$k\times k$$ to $$k + (k − 1)(r − 1) \times k + (k − 1)(r − 1)$$ by filling $$r-1$$ zeros inside filter keeping the number of parameters same.
 
@@ -31,7 +32,7 @@ This work makes three significant contributions:
 
   Inspired by the R-CNN spatial pyramid pooling proposed by He. et al (2014), authors multiple taros convolution filters with different sampling rate at each layer parallely. These features are fused together to generate the final result. Below figure gives an idea:
 
-  <div style="text-align:center"><img src="../images/deeplab/3.png" width=600 ></div>
+  <div style="text-align:center"><img src="../images/deeplab/3.png" width="600" ></div>
 
   This helps us deal with objects at different scales.
 
