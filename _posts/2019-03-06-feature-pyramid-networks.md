@@ -12,11 +12,13 @@ FPN leverages the convolutional networks' pyramidal feature heirarchy to provide
 
 This is the simple feed forward path of the resnet where features at end of each stage (layers with same size are a stage) represents one level of the feature pyramid. Specifially for resnets, these are the last blocks of conv2, conv3, conv4 and conv5.
 
+<div style="text-align:center"><img src="../images/fpn/1.png" width="500"></div>
+
+
+
 ### __Top-down pathway__:
 
-In this pathway, features from higher levels of the pyramids, which contain semantic information, are upsampled and laterally connected with same level of the bottom-up pyramid to produce a lower level of top-down pyramid. That is, each level in top-down pyramid is upsampled to resemble the size of next level (in this case, upsampled by a factor of 2) and added with $$1\times1$$ conv result of same level of bottom-up path. Each level in this pyramid has fixed 256 features. Below image shows the process of upsampling and lateral connection:
-
-<div style="text-align:center"><img src="../images/fpn/1.png" width="500"></div>
+In this pathway, features from higher levels of the pyramids, which contain semantic information, are upsampled and laterally connected with same level of the bottom-up pyramid to produce a lower level of top-down pyramid. That is, each level in top-down pyramid is upsampled to resemble the size of next level (in this case, upsampled by a factor of 2) and added with $$1\times1$$ conv result of same level of bottom-up path. Each level in this pyramid has fixed 256 features. Above image [from paper] shows the process of upsampling and lateral connection:
 
 This pyramid network can then be utilized for various tasks like segmentation, object detection etc.
 
