@@ -20,8 +20,8 @@ dark_theme: false            # enables dark mode
 
 navigation:                  # (optional) site navigation in the header
   - index.html
-  - archive.md
-  - about.md
+#  - archive.md
+#  - about.md
 
 icons:                       # (optional) icons in the header, see http://fontawesome.com/icons
   envelope: "mailto:simranjit2112@gmail.com"
